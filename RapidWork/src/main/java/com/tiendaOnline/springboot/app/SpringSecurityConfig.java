@@ -26,6 +26,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 		.antMatchers("/form/**").hasAnyRole("ADMIN")
 		.antMatchers("/formUsuario/**").hasAnyRole("ADMIN")
 		.antMatchers("/eliminar/**").hasAnyRole("ADMIN")
+		
 		.anyRequest().authenticated()
 		.and()
 		.formLogin().loginPage("/login").permitAll()

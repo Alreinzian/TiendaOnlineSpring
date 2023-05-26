@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Pagina de Bienvenida</title>
+ya esta ahora indexarlo
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark flex-row">
+    <a class="navbar-brand mr-auto" href="/">
+      <img src="" class="img-fluid" alt="Delivery">
+    </a>
+    <ul class="navbar-nav flex-row mr-lg-0">
+      <li class="nav-item">
+        <a class="nav-link pr-2"><i class="fa fa-search"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link pr-2"><i class="fa fa-facebook"></i></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle mr-3 mr-lg-0" id="navbarDropdownMenuLink" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i><span class="caret"></span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" th:href="@{/verPerfil}">Perfil</a>
+          <a class="dropdown-item" th:href="@{/logout}">Salir</a>
+        </div>
+      </li>
+    </ul>
+    <button class="navbar-toggler ml-lg-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+  <nav class="navbar navbar-expand-md navbar-light">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" id="nav-link-custom" th:href="@{/bienvenida}"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/peliculas/listarTodo}">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="@{/pedidos/listarTodo}">Pedidos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Modulo3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Modulo4</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Modulo5</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Buscar">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
+    </div>
+  </nav>
+  <section id="about">
+    <div class="about-left-col">
+      <img src="imagenes/delivery.png" />
+    </div>
+    <div class="about-right-col">
+      <div class="about-text">
+        <h1>About Us</h1>
+        <span class="square"></span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+          accusantium vero provident iure officiis assumenda, ipsa ab veniam
+          quasi, quae non quis unde quod dicta repudiandae obcaecati impedit!
+          Incidunt nam, placeat quis aut suscipit non earum voluptatibus neque
+          sint.
+        </p>
+
+        <div class="line">
+          <span class="line-1"></span><br />
+          <span class="line-2"></span><br />
+          <span class="line-3"></span>
+        </div>
+        <h2>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+          accusantium vero provident iure officiis assumenda, ipsa ab veniam
+          quasi, quae non quis unde quod dicta repudiandae obcaecati impedit!
+          Incidunt nam, placeat quis aut suscipit non earum voluptatibus neque
+          sint.
+        </h2>
+        <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+      </div>
+    </div>
+  </section>
+  <!-- features -->
+  <section id="features">
+    <div class="feature-row">
+      <div class="feature-col">
+        <img src="imagenes/pic-1.png" />
+        <h4>Misión: </h4>
+        <p>
+          Facilitar la vida de las personas al proporcionar servicios de entrega de calidad, confiables y eficientes,
+          ofreciendo soluciones personalizadas que satisfagan las necesidades individuales de nuestros clientes. Nos
+          esforzamos por crear una experiencia excepcional para nuestros usuarios, brindando un servicio rápido, seguro
+          y conveniente que supere sus expectativas.
+        </p>
+      </div>
+      <div class="feature-col">
+        <img src="imagenes/pic-3.png" />
+        <h4>Visión:</h4>
+        <p>
+          Ser la empresa de entrega líder a nivel mundial, reconocida por nuestra excelencia en el servicio al cliente,
+          la eficiencia operativa y la innovación tecnológica. Nos esforzamos por transformar la forma en que las
+          personas acceden y reciben sus productos, estableciendo estándares de calidad inigualables en la industria del
+          delivery y ampliando constantemente nuestras soluciones para satisfacer las necesidades cambiantes del
+          mercado.
+        </p>
+      </div>
+      <div class="feature-col">
+        <img src="imagenes/pic-2.png" />
+        <h4>Valores:</h4>
+        <ul>
+          <li>
+            Excelencia: Nos comprometemos a brindar un servicio de entrega excepcional y superar las expectativas de
+            nuestros clientes en todo momento. Buscamos la excelencia en cada aspecto de nuestro negocio, desde la
+            atención al cliente hasta la puntualidad en las entregas y la calidad de nuestros procesos.
+          </li>
+          <li>
+            Confianza: Establecemos relaciones basadas en la confianza con nuestros clientes, socios y empleados.
+            Valoramos la transparencia y la honestidad en todas nuestras interacciones, y nos esforzamos por cumplir
+            nuestras promesas y compromisos de manera consistente.
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="feature-btn">
+      <div class="line">
+        <span class="line-1"></span><br />
+        <span class="line-2"></span><br />
+        <span class="line-3"></span>
+      </div>
+      <button class="common-btn">Lorem, ipsum.</button>
+    </div>
+  </section>
+
+
+</body>
+
+</html>

@@ -1,30 +1,78 @@
 <!DOCTYPE html>
 <html xmlns:th="http://ww.thymeleaf.org" lang="es">
+
 <head th:replace="layout/layout :: head">
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 </head>
-<body>
-<header th:replace="layout/layout :: header"></header>
-<aside th:replace="layout/layout :: sidebar"></aside>
-<div main id=main class="main">
 
-</div>
-// SECTION
-<section class="section">
-<div class="row">
-<div class="col-lg">
-<div class="card">
-<div class="card-body">
-  <h5 class="card-title" th:text="${titulo}"></h5>
-  <form th:action="@{/cliente/guardar}" th:object="${cliente}" method="">
-  <label for="inputText" class="col-sm-2 col-form-label">Id</label>
-  
-</div>
-</div>
-</div>
-</div>
-</section>
-</div>
+<body>
+  <header th:replace="layout/layout :: header" class="text-center"></header>
+  <aside th:replace="layout/layout :: sidebar" class="text-center"></aside>
+  <div main id="main" class="main">
+    <div class="container">
+      <div class="pagetitle">
+        <h1 th:text="${titulo}"></h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/ventasOnline/">Home</a></li>
+            <li class="breadcrumb-item">
+              <a href="/ventasOnline/cliente/listar">Lista Clientes</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="/ventasOnline/cliente/crear">Crear </a>
+            </li>
+            <li class="breadcrumb-item active" th:text="${subTitulo}"></li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-center">CREAR NUEVO CLIENTE</h5>
+              <form th:action="@{/cliente/guardar}" th:object="${cliente}" method="">
+                <!-- REGISTRAR FORMULARIO -->
+
+                <div class="form-group">
+                  <label for="inputText">Nombre</label>
+                  <input type="text" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                  <label for="inputText">Apellido</label>
+                  <input type="text" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                  <label for="inputText">Dirección</label>
+                  <input type="text" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                  <label for="inputText">DNI</label>
+                  <input type="text" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                  <label for="inputText">Email</label>
+                  <input type="text" class="form-control" />
+                </div>
+
+                <button type="submit" class="btn btn-primary">Guardar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
