@@ -2,43 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="es">
 
 <head th:replace="layout/layout :: head">
-    <script>
-        function validarSoloLetras() {
-            debugger
-            let input = document.getElementById('nombre');
-            let regex = /^[a-zA-Z\s]*$/;
-
-            if (!regex.test(input.value)) {
-                input.value = input.value.replace(/[^a-zA-Z\s]/g, '');
-                document.getElementById('nombre-aviso').textContent = "Solo se permiten letras.";
-            } else {
-                document.getElementById('nombre-aviso').textContent = "";
-            }
-        }
-        function validarDNI() {
-            let input = document.getElementById('dni');
-            let regex = /^[0-9]{8}$/;
-
-            if (!regex.test(input.value)) {
-                input.value = input.value.replace(/[^0-9]/g, '').slice(0, 8);
-                document.getElementById('dni-aviso').textContent = "El DNI debe contener exactamente 8 números.";
-            } else {
-                document.getElementById('dni-aviso').textContent = "";
-            }
-        }
-
-        function validarEmail() {
-            let input = document.getElementById('email');
-            let regex = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
-
-            if (!regex.test(input.value)) {
-                document.getElementById('email-aviso').textContent = "Ingrese un correo electrónico válido.";
-            } else {
-                document.getElementById('email-aviso').textContent = "";
-            }
-        }
-
-    </script>
+  
 </head>
 
 <body>

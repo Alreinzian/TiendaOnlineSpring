@@ -42,7 +42,7 @@ public class ClienteController {
 	}
 	//Modificado de clienteActualizar a clienteCrear
 	@Valid
-	//Crear.html
+	
 	@RequestMapping( "/crear")
 	public String crear(Model model) {
 		Cliente cliente = new Cliente ();
@@ -50,13 +50,17 @@ public class ClienteController {
 		return "/crear";	
 	}
 	
+	
+	
+	//Funcional
+	
 	@RequestMapping(value ="/guardar", method= RequestMethod.POST)
 	public String crear(@ModelAttribute("cliente") Cliente cliente) {
 		    servicio.crear(cliente);
 		    return "redirect:/cliente/listar";
-		    //"redirect:/rest/cliente/listar";
-		
+			
 	}
+	
 	@Valid
 	 @RequestMapping(value ="/actualizar/{id}")
 	public ModelAndView editar(@PathVariable(name="id") int id) {
