@@ -7,6 +7,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +20,8 @@ import com.tiendaOnline.springboot.app.models.entity.Cliente;
 import com.tiendaOnline.springboot.app.services.ClienteServices;
 
 @Controller
-@RequestMapping("/cliente")
+@RequestMapping("/cliente") 
+@CrossOrigin(origins="http://localhost:8070/ventasOnline/login")
 public class ClienteController {
 	@Autowired 
 	private ClienteServices servicio;
@@ -46,7 +48,7 @@ public class ClienteController {
 	@RequestMapping( "/crear")
 	public String crear(Model model) {
 		Cliente cliente = new Cliente ();
-		model.addAttribute("actualizar",cliente);
+		model.addAttribute("cliente",cliente);
 		return "/crear";	
 	}
 	
